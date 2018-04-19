@@ -1,0 +1,108 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .fixed-menu-bg .main_menu .navbar-nav li a,
+    .main_menu .navbar-nav li a {
+        font-size: 12px;
+        padding: 15px 11px;
+    }
+    .logo {
+        float: none;
+        text-align: center;
+    }
+    .welcome-text h2,
+    .welcome-text div#clock {
+        font-size: 30px;
+    }
+    .welcome-text .home-arrow-down {
+        bottom: -110px;
+    }
+    .section-title > p {
+        padding: 0;
+    }
+    .play-video {
+        left: 56.7%;
+    }
+}
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    .navbar-toggle span.icon-bar {
+        background: #fff;
+    }
+    .fixed-menu-bg .navbar-toggle .icon-bar {
+        background: #fff;
+    }
+    .navbar-toggle {
+        margin-right: 0px;
+        margin-top: -30px;
+    }
+    .navbar {
+        min-height: 0px;
+    }
+    .main_menu .navbar-nav > li > a {
+        border-bottom: 2px solid #121212;
+    }
+    .section-title > p {
+        padding: 0;
+    }
+    .main_menu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+    .fixed-menu-bg .main_menu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+    .navbar-toggle {
+        margin-top: -34px;
+    }
+    .navbar-collapse {
+        background: rgba(0, 0, 0, .9);
+        border-top: none;
+    }
+    .fixed-menu-bg .navbar-collapse {
+        background: rgba(0, 0, 0, .9);
+    }
+    ul#work li {
+        float: left;
+        margin: 0 4px 8px;
+        overflow: hidden;
+        padding: 6px 14px;
+    }
+    .scroll-up {
+        bottom: 12px;
+    }
+    .welcome-text h1,
+    .welcome-text div#clock {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .welcome-text .home-arrow-down {
+        bottom: -130px;
+    }
+    .author-social ul li a {
+        height: 35px;
+        line-height: 35px;
+        width: 35px;
+    }
+    .section-title h2 {
+        font-size: 22px;
+    }
+    .demo-title > p {
+        font-size: 18px;
+    }
+    .demo-title > h2 {
+        font-size: 60px;
+    }
+}
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    ul#work li {
+        float: none;
+        text-align: center;
+    }
+}
