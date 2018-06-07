@@ -17,11 +17,11 @@ Version      : 1.0
             $('.preloader-area').delay(350).fadeOut('slow');
         });
         /*end preloader*/
-		
+
 	    /*Start Work JS*/
         $('.portfolio-inner').mixItUp();
         /*End Work JS*/
-		
+
 	    /*Start parallax JS*/
         var parallaxeffect = $(window);
         parallaxeffect.stellar({
@@ -30,7 +30,7 @@ Version      : 1.0
             horizontalScrolling: false
         });
         /*End parallax JS*/
-		
+
         /*start menu background change*/
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 150) {
@@ -40,14 +40,14 @@ Version      : 1.0
             }
         });
 		/*end menu background change*/
-		
+
 	   /*COUNTER UP ACTIVATION JS*/
 		$(".project-number").counterUp({
 			time: 2000,
 			delay: 10
 		});
 		/*COUNTER UP ACTIVATION JS*/
-			    
+
 	    /*start smooth scroll*/
         $('a.smooth-scroll').on("click", function (e) {
             var anchor = $(this);
@@ -57,8 +57,8 @@ Version      : 1.0
             e.preventDefault();
         });
         /*end smooth scroll*/
-	
-	    /*Start testimonial*/		
+
+	    /*Start testimonial*/
         $(".testimonial-list").owlCarousel({
             items: 1,
             autoPlay: true,
@@ -70,9 +70,9 @@ Version      : 1.0
             itemsMobile: [479, 1],
             autoHeight: true,
             pagination: true,
-        }); 
-        /*end testimonial*/	
-		
+        });
+        /*end testimonial*/
+
 		 /*start magnificent popup*/
         var magnifPopup = function () {
             $('.portfolio-popup').magnificPopup({
@@ -99,12 +99,12 @@ Version      : 1.0
                 }
             });
         };
-        // Call the functions 
+        // Call the functions
         magnifPopup();
 
 		/*end magnificent popup*/
-		
-	   
+
+
 		/*start scroll to top*/
         $(window).scroll(function () {
             if ($(this).scrollTop() > 250) {
@@ -120,22 +120,22 @@ Version      : 1.0
             return false;
         });
 		/*end scroll to top*/
-		
+
 		/*start menu hide*/
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
             }
-        }); 
+        });
 		/*end menu hide*/
-		
+
 		/*start scroll spy*/
 	    $('body').scrollspy({
         target: '.navbar-collapse',
         offset: 195
         });
 		/*end scroll spy*/
-		
+
         /*start Type Effect js*/
         var TxtType = function (el, toRotate, period) {
             this.toRotate = toRotate;
@@ -196,18 +196,19 @@ Version      : 1.0
             document.body.appendChild(css);
         };
 
-	   /*end type effect js*/	
-	   
+	   /*end type effect js*/
+
 		/*start countdown js*/
+		/*
 		   $('#clock').countdown('2020/10/10', function(event) {
 		  var $this = $(this).html(event.strftime(''
 			+ '<span>%d</span> days '
 			+ '<span>%H</span> hr '
 			+ '<span>%M</span> min '
 			+ '<span>%S</span> sec'));
-		});
+		});*/
 	    /*end countdown js*/
-		
+
     });
 
 })(jQuery);
