@@ -83,6 +83,9 @@ fieldset {
 .clear {
     clear: both
 }
+.center {
+    text-align: center;
+}
 .m-top-30 {
     margin-top: 30px;
 }
