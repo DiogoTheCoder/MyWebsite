@@ -11,4 +11,3 @@ def index():
     if r:
         data = r.json()
     return render_template('index.html', projectNum=len(data))
-
