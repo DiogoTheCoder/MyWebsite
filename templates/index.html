@@ -36,14 +36,14 @@
 			<div class="header-top-area">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3">
+						<div id="navLogo" class="col-md-4">
 							<!-- Start Logo -->
 							<div class="logo">
 								<a href="#home">Diogo Costa</a>
 							</div>
 							<!--/ End Logo -->
 						</div>
-						<div class="col-md-9">
+						<div id="navMenu" class="col-md-8">
 							<!-- Start Main Menu -->
 							<div class="main_menu">
 								<div class="navbar text-right">
@@ -201,76 +201,53 @@
 		<section id="services" class="our_services_area section-padding gry-bg">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12">
-						<!-- Start Section Title -->
-						<div class="section-title">
-							<h2>What I Do</h2>
-						</div>
-						<!--/ End Section Title -->
+					<div class="section-title">
+						<h2>What I Do</h2>
 					</div>
 				</div>
-                <div class="row">
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="fab fa-android fa-lg"></i>
-							<h4>Android Development</h4>
-							<p>Developed mobile apps to the Android operating system and mobile devices. Used Firebase and HTTP requests for communicating with APIs and databases. Experience in using Google's OAUTH authetation and asynchronous and web scraping tasks.</p>
-						</div>
-					</div>
-					<!-- End Single Service -->
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="fas fa-laptop fa-lg"></i>
-							<h4>Software Development</h4>
-							<p>Worked in many projects as a Software Developer. Have experienced all the process of the software development life cycle and worked in both agile and waterfall environments.</p>
-						</div>
-					</div>
-					<!-- End Single Service -->
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="fas fa-globe fa-lg"></i>
-							<h4>Web Development</h4>
-							<p>Worked in many projects involving delivering services to the web. Experience in both front-end and back-end. Worked with Google APIs and many others.</p>
-						</div>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="row">
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="fas fa-graduation-cap fa-lg"></i>
+				<div class="row text-center">
+				    <div class="col-md-4">
+				        <div class="single-service">
+				            <h4>Android Development</h4>
+				            <p>Developed mobile apps to the Android operating system and mobile devices. Used Firebase and HTTP requests for communicating with APIs and databases. Experience in using Google's OAUTH authetation and asynchronous and web scraping tasks.</p>
+				        </div>
+				    </div>
+                    <div class="col-md-4">
+                        <div class="single-service">
+                            <h4>Software Development</h4>
+                            <p>Worked in many projects as a Software Developer. Have experienced all the process of the software development life cycle and worked in both agile and waterfall environments.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-service">
+                            <h4>Web Development</h4>
+                            <p>Worked in many projects involving delivering services to the web. Experience in both front-end and back-end. Worked with Google APIs and many others.</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="row text-center">
+					<div class="col-md-4">
+						<div class="single-service">
 							<h4>Tutoring</h4>
 							<p>Knowledgeable on the GCSE and A-level Computer Science syllabus, have taught students programming skills and the software development process.</p>
 						</div>
 					</div>
-					<!-- End Single Service -->
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="far fa-chart-bar fa-lg"></i>
+					<div class="col-md-4">
+						<div class="single-service">
 							<h4>Project Management</h4>
 							<p>Able to lead teams and help out other fellow programmers with my ability to solve complex issues, and diagnosis/fix issues and bugs with systems and software rapidly.</p>
 						</div>
 					</div>
-					<!-- End Single Service -->
-					<!-- Start Single Service -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service text-left">
-							<i class="fas fa-gamepad fa-lg"></i>
+					<div class="col-md-4">
+						<div class="single-service">
 							<h4>Game Development</h4>
 							<p>Used the Unity gaming engine to develop some games in my spare time, both 2D and 3D and desktop and mobile.</p>
 						</div>
 					</div>
-					<!-- End Single Service -->
 				</div>
 			</div>
 		</section>
-		<!-- End Single Service Area-->
-		<!-- Start Portfolio Area -->
+
 		<section id="portfolio" class="our-portfolio-area section-padding">
 			<div class="container">
 				<div class="row">
@@ -285,55 +262,58 @@
 				</div>
 			</div>
 		</section>
-		<!--/ End Portfolio Area -->
-		<!-- start complate project area -->
+
 		<div class="complete-project-area section-padding gry-bg">
 			<div class="container">
 				<div class="row">
-					<!-- start single complete project -->
 					<div class="col-md-3">
-						<div class="single-project text-center">
-							<div><i class="fa fa-users"></i>
-							</div>
-							<h4>NUMBER OF PROJECTS</h4>
-							<h2 class="project-number">{{ projectNum }}</h2>
-						</div>
+					    <div class="single-service">
+    						<div class="single-project text-center">
+    							<div><i class="fa fa-users"></i>
+    							</div>
+    							<h4>NUMBER OF PROJECTS</h4>
+    							<h2 class="project-number">{{ projectNum }}</h2>
+    						</div>
+    					</div>
 					</div>
-					<!-- end single complete project -->
-					<!-- start single complete project -->
+
 					<div class="col-md-3">
-						<div class="single-project text-center">
-							<div><i class="fa fa-code"></i>
-							</div>
-							<h4>LINES OF CODE</h4>
-							<h2 class="project-number">75000</h>
-						</div>
+					    <div class="single-service">
+    						<div class="single-project text-center">
+    							<div><i class="fa fa-code"></i>
+    							</div>
+    							<h4>LINES OF CODE</h4>
+    							<h2 class="project-number">75000</h>
+    						</div>
+    					</div>
 					</div>
-					<!-- end single complete project -->
-					<!-- start single complete project -->
+
 					<div class="col-md-3">
-						<div class="single-project text-center">
-							<div><i class="fa fa-coffee"></i>
-							</div>
-							<h4>cups of coffee</h4>
-							<h2 class="project-number">4700</h2>
-						</div>
+					    <div class="single-service">
+    						<div class="single-project text-center">
+    							<div><i class="fa fa-coffee"></i>
+    							</div>
+    							<h4>cups of coffee</h4>
+    							<h2 class="project-number">4700</h2>
+    						</div>
+    					</div>
 					</div>
-					<!-- end single complete project -->
-					<!-- start single complete project -->
+
 					<div class="col-md-3">
-						<div class="single-project text-center">
-							<div><i class="fa fa-clock"></i>
-							</div>
-							<h4>Years of Experience</h4>
-							<h2 class="project-number">7</h2>
-						</div>
+					    <div class="single-service">
+    						<div class="single-project text-center">
+    							<div><i class="fa fa-clock"></i>
+    							</div>
+    							<h4>Years of Experience</h4>
+    							<h2 class="project-number">{{ yearsOfXp }}</h2>
+    						</div>
+    					</div>
 					</div>
-					<!-- end single complete project -->
+
 				</div>
 			</div>
 		</div>
-		<!-- end complete project area -->
+
 		<!-- start blog area -->
 		<div id="blog" class="my_blog_area section-padding">
 			<div class="container">
@@ -415,24 +395,24 @@
 		<footer class="footer-bottom-area section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="footer-social-profile text-center">
-							<ul>
-								<li><a class="f-color" href="https://www.facebook.com/DiogoTheCoder/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-								</li>
-								<li><a class="t-color" href="https://twitter.com/DiogoTheCoder/" target="_blank"><i class="fab fa-twitter"></i></a>
-								</li>
-								<li><a class="g-color" href="https://github.com/DiogoTheCoder/" target="_blank"><i class="fab fa-github"></i></a>
-								</li>
-								<li><a class="l-color" href="https://www.linkedin.com/in/DiogoTheCoder/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-								</li>
-								<li><a class="y-color" href="https://www.youtube.com/DiogoTheCoder?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
-								</li>
-							</ul>
-						</div>
-						<p>All Rights Reserved by <a target="_blank" href="https://www.linkedin.com/in/DiogoTheCoder/">Diogo Costa</a>
-						</p>
+					<div class="footer-social-profile text-center">
+						<ul>
+							<li><a class="f-color" href="https://www.facebook.com/DiogoTheCoder/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							<li><a class="t-color" href="https://twitter.com/DiogoTheCoder/" target="_blank"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li><a class="g-color" href="https://github.com/DiogoTheCoder/" target="_blank"><i class="fab fa-github"></i></a>
+							</li>
+							<li><a class="l-color" href="https://www.linkedin.com/in/DiogoTheCoder/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li><a class="y-color" href="https://www.youtube.com/DiogoTheCoder?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
 					</div>
+				</div>
+				<div class="row">
+					<p>All Rights Reserved by <a target="_blank" href="https://www.linkedin.com/in/DiogoTheCoder/">Diogo Costa</a>
+					</p>
 				</div>
 			</div>
 		</footer>

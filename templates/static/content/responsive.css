@@ -1,8 +1,3 @@
-/* Medium Layout: 1280px. */
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {}
-/* Tablet Layout: 768px. */
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .fixed-menu-bg .main_menu .navbar-nav li a,
     .main_menu .navbar-nav li a {
@@ -26,8 +21,13 @@
     .play-video {
         left: 56.7%;
     }
+
+    #navLogo, #navMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }
-/* Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
     .navbar-toggle span.icon-bar {
@@ -97,8 +97,12 @@
     .demo-title > h2 {
         font-size: 60px;
     }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-/* Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     ul#work li {
