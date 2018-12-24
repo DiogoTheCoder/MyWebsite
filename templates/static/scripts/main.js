@@ -13,12 +13,6 @@ Version      : 1.0
             $('.preloader').fadeOut();
             $('.preloader-area').fadeOut('slow');
 
-            $.stellar({
-                responsive: true,
-                positionProperty: 'position',
-                horizontalScrolling: false
-            });
-
             var elements = document.getElementsByClassName('typewrite');
             for (var i = 0; i < elements.length; i++) {
                 var toRotate = elements[i].getAttribute('data-type');
