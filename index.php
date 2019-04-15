@@ -1,3 +1,7 @@
+<?php
+    include('php/github_stats.php');
+?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -10,7 +14,7 @@
 		<meta name="keywords" content="diogo costa, portfolio, web development, software, brunel, development, android, app">
 		<meta name="author" content="Diogo Costa">
 
-		<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+		<link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet">
@@ -21,8 +25,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css">
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='content/style.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='content/responsive.css') }}" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css" />
 	</head>
 
 	<body>
@@ -134,7 +138,7 @@
 					<div class="col-md-6 col-sm-6">
 						<!-- Start About Image -->
 						<div class="about-image ">
-							<img class="img-responsive" src="{{ url_for('static', filename='images/bg/about-image.jpg') }}" alt="" />
+							<img class="img-responsive" src="img/bg/about-image.jpg" alt="" />
 						</div>
 						<!--/ End About Image -->
 					</div>
@@ -272,7 +276,7 @@
     							<div><i class="fa fa-users"></i>
     							</div>
     							<h4>NUMBER OF PROJECTS</h4>
-    							<h2 class="project-number">{{ projectNum }}</h2>
+    							<h2 class="project-number"><?php echo ((isset($_SESSION["GITHUB_NUM_OF_PROJECTS"]))?$_SESSION["GITHUB_NUM_OF_PROJECTS"]:14); ?></h2>
     						</div>
     					</div>
 					</div>
@@ -305,7 +309,7 @@
     							<div><i class="fa fa-clock"></i>
     							</div>
     							<h4>Years of Experience</h4>
-    							<h2 class="project-number">{{ yearsOfXp }}</h2>
+    							<h2 class="project-number"><?php echo ((isset($_SESSION["YRS_XP"]))?$_SESSION["YRS_XP"]:7); ?></h2>
     						</div>
     					</div>
 					</div>
@@ -330,35 +334,35 @@
                 		    <h1><a href="https://birdmagazine.pt/2018/12/12/governo-forte-e-estavel-onde-voce-esta/" target="_blank">Strong and Stable, Where Are You?</a></h1>
                 			<p>We were promised strong and stable leadership, but I cannot see this?</p>
                 		</div>
-                		<img class="img-responsive" src="{{ url_for('static', filename='images/blog/1.jpg') }}" />
+                		<img class="img-responsive" src="img/blog/1.jpg" />
                 	</div>
                 	<div class="item">
                 		<div class="text">
                 		    <h1><a href="https://birdmagazine.pt/2018/10/17/portugal-e-brexit/" target="_blank">Portugal and Brexit</a></h1>
                 			<p>Brexit and its impact on the UK's oldest ally.</p>
                 		</div>
-                		<img class="img-responsive" src="{{ url_for('static', filename='images/blog/2.jpg') }}" />
+                		<img class="img-responsive" src="img/blog/2.jpg" />
                 	</div>
                 	<div class="item">
                 		<div class="text">
                 		    <h1><a href="https://birdmagazine.pt/2018/07/25/referendos-eles-sao-ruins-para-a-democracia/" target="_blank">Referendums: Bad For Democracy?</a></h1>
                 			<p>Purest form of democracy? That may not be the case.</p>
                 		</div>
-                		<img class="img-responsive" src="{{ url_for('static', filename='images/blog/3.jpg') }}" />
+                		<img class="img-responsive" src="img/blog/3.jpg" />
                 	</div>
                 	<div class="item">
                 		<div class="text">
                 		    <h1><a href="https://birdmagazine.pt/2018/05/30/the-e-u-and-poland-the-fight-to-maintain-democracy/" target="_blank">EU, Poland and Democracy</a></h1>
                 			<p>How can an existing EU member become a dictatorship?</p>
                 		</div>
-                		<img class="img-responsive" src="{{ url_for('static', filename='images/blog/4.jpg') }}" />
+                		<img class="img-responsive" src="img/blog/4.jpg" />
                 	</div>
                 	<div class="item">
                 		<div class="text">
                 			<h1><a href="https://love.lambeth.gov.uk/lambeth-youth-council-news/" target="_blank">A Better Youth Council</a></h1>
             			    <p>Important meetings and a new constitution!</p>
                 		</div>
-                		<img class="img-responsive" src="{{ url_for('static', filename='images/blog/5.jpg') }}" />
+                		<img class="img-responsive" src="img/blog/5.jpg" />
                 	</div>
                 </div>
 			</div>
@@ -422,13 +426,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 
-        <script src="{{ url_for('static', filename='scripts/jquery.counterup.min.js') }}"></script>
+        <script src="js/jquery.counterup.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="{{ url_for('static', filename='scripts/jquery.stellar.min.js') }}"></script>
+        <script src="js/jquery.stellar.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
         <script src="https://www.blogger.com/static/v1/widgets/866654127-widgets.js"></script>
 
-		<script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+		<script src="js/main.js"></script>
 
 		<script>
             $(document).ready(function(){
