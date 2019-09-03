@@ -92,7 +92,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="welcome-text text-center">
-										<h1 class="typewrite" data-period="2000" data-type='[ "Hi, I am Diogo Costa.", "I am a Developer.", "I am a Designer.", "I am a Engineer.", "I am creative.", "I am a Londoner." ]'>
+										<h1 class="typewrite" data-period="2000" data-type='[ "Hi, I am Diogo Costa.", "I am a Developer.", "I am a Designer.", "I am an Engineer.", "I am creative.", "I am a Londoner." ]'>
 										</h1>
 										<div class="line"></div>
 										<div class="author-social text-center">
