@@ -9,6 +9,14 @@ Version      : 1.0
     'use strict';
 
     $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "php/stats.php",
+            success: function(response) {
+                console.log('Stats Loaded.');
+            }
+        });
+
         $(window).on('load', function() {
             $('.preloader').fadeOut();
             $('.preloader-area').fadeOut('slow');

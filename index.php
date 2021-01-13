@@ -1,7 +1,3 @@
-<?php
-include('php/github_stats.php');
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,8 +18,7 @@ include('php/github_stats.php');
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css">
@@ -148,74 +143,25 @@ include('php/github_stats.php');
             <div class="col-sm-12">
                 <!-- Start Section Title -->
                 <div class="section-title">
-                    <h2>Who I Am</h2>
+                    <h2>My Background</h2>
                 </div>
                 <!--/ End Section Title -->
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-6 col-sm-6 text-center align-self-center">
                 <!-- Start About Image -->
-                <div class="about-image ">
-                    <img class="img-responsive" src="img/bg/about-image.jpg" alt=""/>
+                <div class="about-image">
+                    <img class="img-responsive" src="img/bg/about-image.jpg" alt="Diogo Costa"/>
                 </div>
                 <!--/ End About Image -->
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-6 col-sm-6 text-center align-self-center">
                 <!-- Start About Text -->
-                <div class="about-Landon-text">
+                <div class="about-landon-text">
                     <h2>My name is Diogo Costa, Software Developer from the UK.</h2>
-                    <p>Experienced Software Developer with a proven track record and expert knowledge of developing
-                        software for a variety of platforms and technologies such as Flask, Laravel, Flutter and React.
-                        Worked with Lending Works as a full-stack Web Developer and at Coval Solutions as a Mobile App
-                        Developer.</p>
-                </div>
-                <div class="author-skills">
-                    <div class="progress-bar-inner">
-                        <p class="progress-bar-text">
-                            Python &amp; Flask
-                            <span>90%</span>
-                        </p>
-                        <div class="progress-bar">
-                            <span style="transition: width 3s ease 0s; width: 90%;" data-percent="90"></span>
-                        </div>
-                    </div>
-                    <div class="progress-bar-inner">
-                        <p class="progress-bar-text">
-                            PHP &amp; Laravel
-                            <span>75%</span>
-                        </p>
-                        <div class="progress-bar">
-                            <span style="transition: width 3s ease 0s; width: 75%;" data-percent="75"></span>
-                        </div>
-                    </div>
-                    <div class="progress-bar-inner">
-                        <p class="progress-bar-text">
-                            Flutter & Dart
-                            <span>60%</span>
-                        </p>
-                        <div class="progress-bar">
-                            <span style="transition: width 3s ease 0s; width: 60%;" data-percent="60"></span>
-                        </div>
-                    </div>
-                    <div class="progress-bar-inner">
-                        <p class="progress-bar-text">
-                            React & React Native
-                            <span>50%</span>
-                        </p>
-                        <div class="progress-bar">
-                            <span style="transition: width 3s ease 0s; width: 50%;" data-percent="50"></span>
-                        </div>
-                    </div>
-                    <div class="progress-bar-inner">
-                        <p class="progress-bar-text">
-                            C# &amp; Java
-                            <span>75%</span>
-                        </p>
-                        <div class="progress-bar">
-                            <span style="transition: width 3s ease 0s; width: 75%;" data-percent="75"></span>
-                        </div>
-                    </div>
+                    <p>Having been programming since the age of thirteen, starting with Python and moving onto several other languages, frameworks and technologies, working in the FinTech industry has given me the tools to build various web and mobile applications to suit your business needs.</p>
+                    <p>Currently working at Lending Works as a Software Developer (mostly PHP and JavaScript/TypeScript) and as the Lead Developer for Coval Solutions, building mobile applications in Flutter.</p>
                 </div>
                 <!--/ End About Text -->
             </div>
@@ -228,7 +174,7 @@ include('php/github_stats.php');
     <div class="container">
         <div class="row">
             <div class="section-title">
-                <h2>What I Do</h2>
+                <h2>What I Enjoy Doing</h2>
             </div>
         </div>
         <div class="row text-center">
@@ -286,7 +232,7 @@ include('php/github_stats.php');
                         <div><i class="fa fa-users"></i>
                         </div>
                         <h4>NUMBER OF PROJECTS</h4>
-                        <h2 class="project-number"><?php echo($_SESSION["GITHUB_NUM_OF_PROJECTS"] ?? 30); ?></h2>
+                        <h2 class="project-number"><?php echo($_SESSION["GITHUB_NUM_OF_PROJECTS"] ?? 51); ?></h2>
                     </div>
                 </div>
             </div>
@@ -297,7 +243,7 @@ include('php/github_stats.php');
                         <div><i class="fa fa-code"></i>
                         </div>
                         <h4>LINES OF CODE</h4>
-                        <h2 class="project-number">750000</h2>
+                        <h2 class="project-number"><?php echo($_SESSION["GITHUB_NUM_OF_LINES_OF_CODE"] ?? 51); ?></h2>
                     </div>
                 </div>
             </div>
@@ -334,51 +280,25 @@ include('php/github_stats.php');
         <div class="row">
             <div class="col-sm-12">
                 <div class="section-title">
-                    <h2>Recent blog post</h2>
+                    <h2>Technologies</h2>
                 </div>
             </div>
         </div>
-        <div class="owl-carousel">
-            <div class="item">
-                <div class="text">
-                    <h1><a href="https://birdmagazine.pt/2018/12/12/governo-forte-e-estavel-onde-voce-esta/"
-                           target="_blank">Strong and Stable, Where Are You?</a></h1>
-                    <p>We were promised strong and stable leadership, but I cannot see this?</p>
-                </div>
-                <img class="img-responsive" src="img/blog/1.jpg"/>
-            </div>
-            <div class="item">
-                <div class="text">
-                    <h1><a href="https://birdmagazine.pt/2018/10/17/portugal-e-brexit/" target="_blank">Portugal and
-                            Brexit</a></h1>
-                    <p>Brexit and its impact on the UK's oldest ally.</p>
-                </div>
-                <img class="img-responsive" src="img/blog/2.jpg"/>
-            </div>
-            <div class="item">
-                <div class="text">
-                    <h1><a href="https://birdmagazine.pt/2018/07/25/referendos-eles-sao-ruins-para-a-democracia/"
-                           target="_blank">Referendums: Bad For Democracy?</a></h1>
-                    <p>Purest form of democracy? That may not be the case.</p>
-                </div>
-                <img class="img-responsive" src="img/blog/3.jpg"/>
-            </div>
-            <div class="item">
-                <div class="text">
-                    <h1><a href="https://birdmagazine.pt/2018/05/30/the-e-u-and-poland-the-fight-to-maintain-democracy/"
-                           target="_blank">EU, Poland and Democracy</a></h1>
-                    <p>How can an existing EU member become a dictatorship?</p>
-                </div>
-                <img class="img-responsive" src="img/blog/4.jpg"/>
-            </div>
-            <div class="item">
-                <div class="text">
-                    <h1><a href="https://love.lambeth.gov.uk/lambeth-youth-council-news/" target="_blank">A Better Youth
-                            Council</a></h1>
-                    <p>Important meetings and a new constitution!</p>
-                </div>
-                <img class="img-responsive" src="img/blog/5.jpg"/>
-            </div>
+        <div class="technologies text-center">
+            <ul>
+                <li><a class="f-color"><i class="fab fa-python"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-java"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-php"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-laravel"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-drupal"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-wordpress"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-js"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-react"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-docker"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-android"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-apple"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-windows"></i></a></li>
+            </ul>
         </div>
     </div>
 </div>
@@ -393,27 +313,22 @@ include('php/github_stats.php');
                 <!--/ End Section Title -->
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-12">
-                <!-- Start Contact Form -->
-                <div class="contact-us">
-                    <div id="form-messages"></div>
-                    <div class="col-md-6 form-group text-center">
-                        <button class="contact-btn" type="submit" data-toggle="tooltip" data-placement="top"
-                                title="hello@diogothecoder.com"
-                                onclick="location.href='mailto:hello@diogothecoder.com';"><i
-                                    class="fa fa-paper-plane"></i>Email Me
-                        </button>
-                    </div>
-                    <div class="col-md-6 form-group text-center">
-                        <button class="contact-btn" type="submit" data-toggle="tooltip" data-placement="top"
-                                title="@DiogoTheCoder" onclick="location.href='skype:live:diogothecoder?call';"><i
-                                    class="fab fa-skype"></i>Call Me
-                        </button>
-                    </div>
-                </div>
-                <!-- End Contact Form -->
+        <div class="row contact-us">
+            <!-- Start Contact Form -->
+            <div class="col-md-6 form-group text-center">
+                <button class="contact-btn" type="submit" data-toggle="tooltip" data-placement="top"
+                        title="hello@diogothecoder.com"
+                        onclick="location.href='mailto:hello@diogothecoder.com';"><i
+                            class="fa fa-paper-plane"></i>Email Me
+                </button>
             </div>
+            <div class="col-md-6 form-group text-center">
+                <button class="contact-btn" type="submit" data-toggle="tooltip" data-placement="top"
+                        title="@DiogoTheCoder" onclick="location.href='skype:live:diogothecoder?call';"><i
+                            class="fab fa-skype"></i>Call Me
+                </button>
+            </div>
+            <!-- End Contact Form -->
         </div>
     </div>
 </section>
@@ -452,10 +367,8 @@ include('php/github_stats.php');
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 <script src="js/jquery.counterup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
