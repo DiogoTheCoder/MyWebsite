@@ -9,28 +9,28 @@ Version      : 1.0
     'use strict';
 
     $(document).ready(function() {
-        $.ajax({
-            type: "GET",
-            url: "php/stats.php",
-            success: function(response) {
-                console.log('Stats Loaded.');
-            }
-        });
+        // $.ajax({
+        //     type: "GET",
+        //     url: "php/stats.php",
+        //     success: function(response) {
+        //         console.log('Stats Loaded.');
+        //     }
+        // });
 
         $(window).on('load', function() {
             $('.preloader').fadeOut();
             $('.preloader-area').fadeOut('slow');
 
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
+            const elements = document.getElementsByClassName('typewrite');
+            for (let i = 0; i < elements.length; i++) {
+                const toRotate = elements[i].getAttribute('data-type');
+                const period = elements[i].getAttribute('data-period');
                 if (toRotate) {
                     new TxtType(elements[i], JSON.parse(toRotate), period);
                 }
             }
 
-            var css = document.createElement("style");
+            const css = document.createElement("style");
             css.type = "text/css";
             css.innerHTML = ".typewrite > .wrap { border-right: 0.02em solid #fff}";
             document.body.appendChild(css);
@@ -50,7 +50,7 @@ Version      : 1.0
         });
 
         $('a.smooth-scroll').on("click", function(e) {
-            var anchor = $(this);
+            const anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $(anchor.attr('href')).offset().top - 60
             }, 1000);
@@ -73,7 +73,7 @@ Version      : 1.0
         });
 
         $(document).on('click', '.navbar-collapse.in', function(e) {
-            if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+            if ($(e.target).is('a') && $(e.target).attr('class') !== 'dropdown-toggle') {
                 $(this).collapse('hide');
             }
         });
@@ -86,7 +86,7 @@ Version      : 1.0
         });
         /*end scroll spy*/
 
-        var TxtType = function(el, toRotate, period) {
+        const TxtType = function(el, toRotate, period) {
             this.toRotate = toRotate;
             this.el = el;
             this.loopNum = 0;
@@ -97,8 +97,8 @@ Version      : 1.0
         };
 
         TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+            const i = this.loopNum % this.toRotate.length;
+            const fullTxt = this.toRotate[i];
 
             if (this.isDeleting) {
                 this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -108,8 +108,8 @@ Version      : 1.0
 
             this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-            var that = this;
-            var delta = 150 - Math.random() * 100;
+            const that = this;
+            let delta = 150 - Math.random() * 100;
 
             if (this.isDeleting) {
                 delta /= 2;
