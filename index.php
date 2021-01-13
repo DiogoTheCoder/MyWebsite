@@ -232,7 +232,7 @@
                         <div><i class="fa fa-users"></i>
                         </div>
                         <h4>NUMBER OF PROJECTS</h4>
-                        <h2 class="project-number"><?php echo($_SESSION["GITHUB_NUM_OF_PROJECTS"] ?? 51); ?></h2>
+                        <h2 id="repoCount" class="project-number">0</h2>
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                         <div><i class="fa fa-code"></i>
                         </div>
                         <h4>LINES OF CODE</h4>
-                        <h2 class="project-number"><?php echo($_SESSION["GITHUB_NUM_OF_LINES_OF_CODE"] ?? 51); ?></h2>
+                        <h2 id="totalLinesOfCode" class="project-number">0</h2>
                     </div>
                 </div>
             </div>
@@ -253,8 +253,8 @@
                     <div class="single-project text-center">
                         <div><i class="fa fa-coffee"></i>
                         </div>
-                        <h4>cups of coffee</h4>
-                        <h2 class="project-number">8500</h2>
+                        <h4>CUPS OF COFFEE</h4>
+                        <h2 id="numberOfCoffees" class="project-number">0</h2>
                     </div>
                 </div>
             </div>
@@ -264,8 +264,8 @@
                     <div class="single-project text-center">
                         <div><i class="fa fa-clock"></i>
                         </div>
-                        <h4>Years of Experience</h4>
-                        <h2 class="project-number"><?php echo($_SESSION["YRS_XP"] ?? 8); ?></h2>
+                        <h4>YEARS OF EXPERIENCE</h4>
+                        <h2 id="yearsOfExperience" class="project-number"></h2>
                     </div>
                 </div>
             </div>
@@ -376,6 +376,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://www.blogger.com/static/v1/widgets/866654127-widgets.js"></script>
 
+<script src="js/stats.js"></script>
 <script src="js/main.js"></script>
 
 <script>

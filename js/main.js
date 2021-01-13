@@ -9,13 +9,32 @@ Version      : 1.0
     'use strict';
 
     $(document).ready(function() {
-        // $.ajax({
-        //     type: "GET",
-        //     url: "php/stats.php",
-        //     success: function(response) {
-        //         console.log('Stats Loaded.');
-        //     }
-        // });
+        $.ajax({
+            type: "GET",
+            url: "https://europe-west2-diogothecoder-portfolio.cloudfunctions.net/getStats",
+            timeout: "5000",
+            dataType: "json",
+            crossDomain: true,
+            success: function(response) {
+                $('#repoCount').text(response['repoCount'])
+                $('#totalLinesOfCode').text(response['totalLinesOfCode'])
+                $('#numberOfCoffees').text(response['numberOfCoffees'])
+                $('#yearsOfExperience').text(response['yearsOfExperience'])
+                $(".project-number").counterUp({
+                    time: 2000,
+                    delay: 10
+                });
+            },
+            catch: function (err) {
+                console.error(err);
+                // We just count up the default values ¯\_(ツ)_/¯
+                $(".project-number").counterUp({
+                    time: 2000,
+                    delay: 10
+                });
+            }
+
+        });
 
         $(window).on('load', function() {
             $('.preloader').fadeOut();
