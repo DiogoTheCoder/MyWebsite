@@ -33,7 +33,6 @@ Version      : 1.0
                     delay: 10
                 });
             }
-
         });
 
         $(window).on('load', function() {

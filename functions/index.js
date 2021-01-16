@@ -2,6 +2,8 @@ const admin = require('firebase-admin');
 const functions = require("firebase-functions");
 const fetch = require("node-fetch");
 
+require('dotenv').config()
+
 admin.initializeApp();
 
 const functionBuilder = functions.region('europe-west2');
@@ -13,7 +15,7 @@ const organisations = [
 ];
 
 const headers = {
-    'Authorization': 'Bearer 5469a1ac7eec001247deb47d22f709b62e491f34',
+    'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
 };
 
 const ONE_DAY = 1000 * 60 * 60 * 24;
