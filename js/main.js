@@ -10,7 +10,7 @@ Version      : 1.0
     'use strict';
 
     const cfg = {
-        scrollDuration: 800, // smoothscroll duration
+        scrollDuration: 200, // smoothscroll duration
         mailChimpURL: '' // mailchimp url
     };
     const $WIN = $(window);
