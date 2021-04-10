@@ -230,7 +230,6 @@ ul {
     vertical-align: bottom;
 }
 
-
 /* -------------------------------------------------------------------
  * ## main navigation
  * ------------------------------------------------------------------- */
@@ -265,7 +264,6 @@ ul {
 .header-nav li a:hover {
     color: #0d6efd;
 }
-
 
 /* -------------------------------------------------------------------
  * ## mobile menu toggle
@@ -748,6 +746,12 @@ div.single-project>div i.fa {
 
 h2.project-number {
     margin: 0;
+}
+
+@media only screen and (max-width: 480px){
+    h2.project-number {
+        font-size: 24px;
+    }
 }
 
 .single-project h4 {
