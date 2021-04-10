@@ -5,30 +5,159 @@ Template Name: Dreamer - Personal Portfolio Template.
 Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
-(function($) {
+
+(function ($) {
     'use strict';
 
-    $(document).ready(function() {
-        $(window).on('load', function() {
+    const cfg = {
+        scrollDuration: 800, // smoothscroll duration
+        mailChimpURL: '' // mailchimp url
+    };
+    const $WIN = $(window);
+
+
+    // Add the User Agent to the <html>
+    // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
+    const doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+
+    /* move header
+     * -------------------------------------------------- */
+    const ssMoveHeader = function () {
+
+        const $hero = $('.s-hero'),
+            $hdr = $('.s-header'),
+            triggerHeight = $hero.outerHeight() - 170;
+
+
+        $WIN.on('scroll', function () {
+
+            let loc = $WIN.scrollTop();
+
+            if (loc > triggerHeight) {
+                $hdr.addClass('sticky');
+            } else {
+                $hdr.removeClass('sticky');
+            }
+
+            if (loc > triggerHeight + 20) {
+                $hdr.addClass('offset');
+            } else {
+                $hdr.removeClass('offset');
+            }
+
+            if (loc > triggerHeight + 150) {
+                $hdr.addClass('scrolling');
+            } else {
+                $hdr.removeClass('scrolling');
+            }
+
+        });
+
+    };
+
+    /* mobile menu
+     * ---------------------------------------------------- */
+    const ssMobileMenu = function () {
+
+        const $toggleButton = $('.header-menu-toggle');
+        const $headerContent = $('.header-content');
+        const $siteBody = $("body");
+
+        $toggleButton.on('click', function (event) {
+            event.preventDefault();
+            $toggleButton.toggleClass('is-clicked');
+            $siteBody.toggleClass('menu-is-open');
+        });
+
+        $headerContent.find('.header-nav a, .btn').on("click", function () {
+
+            // at 900px and below
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                $toggleButton.toggleClass('is-clicked');
+                $siteBody.toggleClass('menu-is-open');
+            }
+        });
+
+        $WIN.on('resize', function () {
+
+            // above 900px
+            if (window.matchMedia('(min-width: 901px)').matches) {
+                if ($siteBody.hasClass("menu-is-open")) $siteBody.removeClass("menu-is-open");
+                if ($toggleButton.hasClass("is-clicked")) $toggleButton.removeClass("is-clicked");
+            }
+        });
+
+    };
+
+    /* smooth scrolling
+     * ------------------------------------------------------ */
+
+    const ssSmoothScroll = function () {
+
+        $('.smoothscroll').on('click', function (e) {
+            const target = this.hash;
+            const $target = $(target);
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, cfg.scrollDuration, 'swing').promise().done(function () {
+                window.location.hash = target;
+            });
+        });
+
+    };
+
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "https://europe-west2-diogothecoder-portfolio.cloudfunctions.net/getStats",
+            timeout: "5000",
+            dataType: "json",
+            crossDomain: true,
+            success: function (response) {
+                $('#repoCount').text(response['repoCount'])
+                $('#totalLinesOfCode').text(response['totalLinesOfCode'])
+                $('#numberOfCoffees').text(response['numberOfCoffees'])
+                $('#yearsOfExperience').text(response['yearsOfExperience'])
+                $(".project-number").counterUp({
+                    time: 2000,
+                    delay: 10
+                });
+            },
+            catch: function (err) {
+                console.error(err);
+                // We just count up the default values ¯\_(ツ)_/¯
+                $(".project-number").counterUp({
+                    time: 2000,
+                    delay: 10
+                });
+            }
+        });
+
+        $(window).on('load', function () {
             $('.preloader').fadeOut();
             $('.preloader-area').fadeOut('slow');
 
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
+            const elements = document.getElementsByClassName('typewrite');
+            for (let i = 0; i < elements.length; i++) {
+                const toRotate = elements[i].getAttribute('data-type');
+                const period = elements[i].getAttribute('data-period');
                 if (toRotate) {
                     new TxtType(elements[i], JSON.parse(toRotate), period);
                 }
             }
 
-            var css = document.createElement("style");
+            const css = document.createElement("style");
             css.type = "text/css";
             css.innerHTML = ".typewrite > .wrap { border-right: 0.02em solid #fff}";
             document.body.appendChild(css);
         });
 
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             if ($(window).scrollTop() > 150) {
                 $('.header-top-area').addClass('fixed-menu-bg');
             } else {
@@ -36,20 +165,15 @@ Version      : 1.0
             }
         });
 
-        $(".project-number").counterUp({
-            time: 2000,
-            delay: 10
-        });
-
-        $('a.smooth-scroll').on("click", function(e) {
-            var anchor = $(this);
+        $('a.smooth-scroll').on("click", function (e) {
+            const anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $(anchor.attr('href')).offset().top - 60
             }, 1000);
             e.preventDefault();
         });
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 $('.scroll-up').fadeIn();
             } else {
@@ -57,15 +181,15 @@ Version      : 1.0
             }
         });
 
-        $('.scroll-up').on("click", function() {
+        $('.scroll-up').on("click", function () {
             $("html, body").animate({
                 scrollTop: 0
             }, 800);
             return false;
         });
 
-        $(document).on('click', '.navbar-collapse.in', function(e) {
-            if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+        $(document).on('click', '.navbar-collapse.in', function (e) {
+            if ($(e.target).is('a') && $(e.target).attr('class') !== 'dropdown-toggle') {
                 $(this).collapse('hide');
             }
         });
@@ -78,7 +202,7 @@ Version      : 1.0
         });
         /*end scroll spy*/
 
-        var TxtType = function(el, toRotate, period) {
+        const TxtType = function (el, toRotate, period) {
             this.toRotate = toRotate;
             this.el = el;
             this.loopNum = 0;
@@ -88,9 +212,9 @@ Version      : 1.0
             this.isDeleting = false;
         };
 
-        TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+        TxtType.prototype.tick = function () {
+            const i = this.loopNum % this.toRotate.length;
+            const fullTxt = this.toRotate[i];
 
             if (this.isDeleting) {
                 this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -100,8 +224,8 @@ Version      : 1.0
 
             this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-            var that = this;
-            var delta = 150 - Math.random() * 100;
+            const that = this;
+            let delta = 150 - Math.random() * 100;
 
             if (this.isDeleting) {
                 delta /= 2;
@@ -116,7 +240,7 @@ Version      : 1.0
                 delta = 500;
             }
 
-            setTimeout(function() {
+            setTimeout(function () {
                 that.tick();
             }, delta);
         };
@@ -241,5 +365,15 @@ Version      : 1.0
         );
 
     });
+
+    /* initialize
+     * ------------------------------------------------------ */
+    (function ssInit() {
+
+        ssMoveHeader();
+        ssMobileMenu();
+        ssSmoothScroll();
+
+    })();
 
 })(jQuery);
