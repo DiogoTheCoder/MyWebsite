@@ -43,7 +43,7 @@
     <div class="header-content">
         <nav class="row header-nav-wrap">
             <ul class="header-nav">
-                <li><span><a class="smoothscroll" href="/" title="Home">Home</a></span></li>
+                <li><span><a class="smoothscroll" href="#hero" title="Intro">Home</a></span></li>
                 <li><a class="smoothscroll" href="#about" title="About">About</a></li>
                 <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
                 <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
