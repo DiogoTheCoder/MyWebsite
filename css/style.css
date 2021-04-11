@@ -20,7 +20,6 @@
 
   =============================================================*/
 
-
 /*==================================
 1. General Style
 ==================================*/
@@ -236,7 +235,7 @@ ul {
 
 .header-nav-wrap {
     max-width: 1400px;
-    padding-left: 10px;
+    padding-left: calc(15%);
 }
 
 .header-nav {
@@ -354,7 +353,6 @@ ul {
     transform: rotate(225deg);
 }
 
-
 /* -------------------------------------------------------------------
  * responsive:
  * header
@@ -367,7 +365,6 @@ ul {
     .header-nav-wrap {
         max-width: none;
         width: 100%;
-        padding-left: 13.2rem;
     }
     .header-content .btn {
         right: 6rem;
@@ -519,6 +516,10 @@ ul {
     text-transform: capitalize
 }
 
+.author-social{
+    position: relative;
+}
+
 .author-social ul li {
     display: inline-block;
     list-style: outside none none
@@ -533,7 +534,8 @@ ul {
     line-height: 45px;
     margin: 0 5px;
     text-align: center;
-    width: 45px
+    width: 45px;
+    z-index: -1;
 }
 
 .author-social ul li a:hover {

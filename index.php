@@ -10,7 +10,7 @@
     <meta name="keywords"
           content="diogothecoder, diogo costa, diogo, costa, web development, software, coval solutions, lending works, brunel, flutter, laravel, development, android, app">
     <meta name="author" content="Diogo Costa">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+    <link rel="icon" type="image/svg+xml" href="img/DC_favicon.svg">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
