@@ -36,7 +36,7 @@
 </div>
 <header class="s-header">
     <div class="header-logo">
-        <a href="index.html">
+        <a href=".">
             <img src="img/dc_logo.png" alt="Homepage">
         </a>
     </div>
