@@ -248,18 +248,18 @@
         </div>
         <div class="technologies text-center">
             <ul>
-                <li><a class="f-color"><i class="fab fa-python"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-java"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-php"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-laravel"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-drupal"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-wordpress"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-js"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-react"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-docker"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-android"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-apple"></i></a></li>
-                <li><a class="f-color"><i class="fab fa-windows"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-python fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-java fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-php fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-laravel fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-drupal fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-wordpress fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-js fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-react fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-docker fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-android fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-apple fa-spin"></i></a></li>
+                <li><a class="f-color"><i class="fab fa-windows fa-spin"></i></a></li>
             </ul>
         </div>
     </div>
